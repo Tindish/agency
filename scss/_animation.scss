@@ -1,0 +1,88 @@
+$trans-style: ease-in-out; // Global transition type
+$trans-speed: .1s; // Global transition speed
+$trans-medium: .5s; // Global transition speed
+$trans-slow: 1s; // Slow 
+
+// DELAYS
+.animation-order {
+  &-1 {animation-delay: $trans-medium!important;}
+  &-2 {animation-delay: $trans-medium *2!important;}
+  &-3 {animation-delay: $trans-medium *3!important;}
+  &-4 {animation-delay: $trans-medium *4!important;}
+  &-5 {animation-delay: $trans-medium *5!important;}
+}
+
+
+
+//BOUNCE up and down
+.bounce {
+  animation: bobbing 1s infinite;
+  animation-delay: $trans-slow *3
+}
+@keyframes bobbing {
+	0% {
+    bottom: 1px;
+	}
+	50% {
+    bottom: 5px;
+	}
+	100% {
+    bottom: 1px;
+	}
+}
+
+// ALL BUTTONS
+.btn {
+  @include flipInX(
+    $duration: $trans-slow
+  );
+}
+
+// CIRCLE BEHIND IMAGE
+.circle {
+  @include zoomIn(
+    $duration: $trans-slow
+  );
+  img {
+    @include fadeIn(
+      $duration: $trans-slow
+    );
+  }
+}
+
+// NUMBER IN BLOCK
+.number {
+  @include flipInY(
+    $duration: $trans-slow
+  );
+}
+
+// GALLERY
+.gallery {
+  .image-holder {
+    @include fadeIn (
+      $duration: $trans-slow
+    );
+  }
+  .btn {
+    @include flipInX ();
+  }
+  .tabs {
+    @include slideInRight (
+      $duration: $trans-slow
+    );
+  }
+  .featured {
+    @include flipInY (
+      $duration: $trans-slow
+    );
+  }
+}
+
+.fadeInDown {
+  @include fadeIn (
+    $duration: $trans-slow
+  );
+}
+
+

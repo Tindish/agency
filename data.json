@@ -1,0 +1,142 @@
+{
+  "creator": {
+    "name": "Adult Services Co",
+    "url": "#"
+  },
+  "client": {
+    "name": "Lavender Escorts",
+    "main": "London Escorts",
+    "phone": "07700 900123",
+    "sms": "07700 900123",
+    "email": "hello@lavenderescorts.com",
+    "whatsapp": "07700 900123",
+    "socials": [{
+      "name": "Facebook",
+      "icon": "fab fa-facebook",
+      "url": "https://faceboook.com"
+    }, {
+      "name": "Instagram",
+      "icon": "fab fa-instagram",
+      "url": "https://instagram.com"
+    }, {
+      "name": "Snapchat",
+      "icon": "fab fa-snapchat-ghost",
+      "url": "https://snapchat.com"
+    }],
+    "fonts": "family=Open+Sans:wght@400;700&family=Parisienne",
+    "primary": "764CCD"
+  },
+  "addons": {
+    "locations": 1,
+    "recruitment": 1,
+    "blog": 1,
+    "topbar": 1,
+    "footer-buttons": 1
+  },
+  "stats": {
+    "nationalitys": {
+      "id": "nationality",
+      "title": "Nationality",
+      "options": ["British", "Eastern European", "Asian"]
+    },
+    "genders": {
+      "id": "gender",
+      "title": "Gender",
+      "options": ["Female", "Male", "Trans", "Non-Binary", "Other"]
+    },
+    "locations": {
+      "id": "location",
+      "title": "Locations",
+      "options": ["Manchester", "London", "Birmingham", "Liverpool", "Glasgow", "Edinburgh", "Newcastle", "Derby"]
+    },
+    "sizes": {
+      "id": "size",
+      "title": "Dress Size",
+      "options": ["6", "8", "10", "12", "Other"]
+    },
+    "heights": {
+      "id": "height",
+      "title": "Height",
+      "options": ["< 5ft", "5ft; - 5ft3;", "5ft4 - 5ft7", "5ft8 - 6'", "6ft+"]
+    },
+    "busts": {
+      "id": "bust",
+      "title": "Bust Size",
+      "options": ["26A", "26B", "26C", "26D", "26DD", "26F", "28A", "28B", "28C", "28D", "28DD", "28F", "30A", "30B", "30C", "30D", "30DD", "30F", "32A", "32B", "32C", "32D", "32DD", "32F", "34A", "34B", "34C", "34D", "34DD", "34F", "36A", "36B", "36C", "36D", "36DD", "Other"]
+    },
+    "hairs": {
+      "id": "hair",
+      "title": "Hair Colour",
+      "options": ["Blonde", "Brunette", "Redhead", "Black", "Other"]
+    },
+    "eyes": {
+      "id": "eye",
+      "title": "Eye Colour",
+      "options": ["Blue", "Brown", "Green", "Other"]
+    }
+  },
+  "services": ["Dinner Date", "OWO", "GFE", "DFK", "A-Level", "Domination", "CIM", "COF", "CIF", "PSE", "Massage", "Uniforms", "69", "Receiving Oral", "Duo", "Dinner Date", "OWO", "GFE", "DFK", "A-Level", "Domination", "CIM", "COF", "CIF", "PSE", "Massage", "Uniforms", "69", "Receiving Oral", "Duo"],
+  "users": [{
+    "id": 1,
+    "name": "Christina",
+    "url": "cristina-1",
+    "status": 1,
+    "age": "24",
+    "location": "London",
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 2, 3, 8, 2, 1],
+    "services": [0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Dinner Date",
+      "rate1": 700,
+      "rate2": 700
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 2,
+    "name": "Amelia",
+    "url": "amelia-1",
+    "status": 1,
+    "age": "24",
+    "location": "London",
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 2, 3, 8, 2, 1],
+    "services": [0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Dinner Date",
+      "rate1": 700,
+      "rate2": 700
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }]
+}

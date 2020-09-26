@@ -1,0 +1,42 @@
+//SIZING
+$container-width: 1500px;
+$container-medium: 1300px;
+$container-small: 1000px;
+$container-tiny: 300px;
+
+$height-header: 4.5rem; // 72px
+$height-header-mobile: 4rem; // 64px
+$height-header-fixed: 3rem; // 48px
+$height-header-absolute: 2.25rem;
+$height-header-absolute-fixed: 1.5rem;
+
+$width-sidebar: 25rem; // 400px
+
+$gallery-padding: .5rem;
+$wide-padding: 1rem; // 16px
+$narrow-padding: .25rem; // 4px
+
+
+//COLORS
+$color: #1C1C1C;
+$color-bg: #FDFAFA;
+$color-primary: #764CCD;
+$color-secondary: #F486E0;
+$color-divider: #454545; // divider
+$color-border: #C7C7C7; // forms
+
+$fade: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 65%, rgba(0,0,0,0) 100%);
+
+
+//FONTS
+$font: 'Open Sans', sans-serif;
+$font-heading: 'Open Sans', sans-serif;
+$font-awesome: 'Font Awesome 5 Free',  sans-serif;
+$font-mixed: 'Font Awesome 5 Free', 'Open Sans';
+
+// Weights
+$regular: 400;
+$bold: 700;
+
+// Global size
+$font-size: .875rem // Root font size is 14px
