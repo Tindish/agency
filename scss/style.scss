@@ -114,6 +114,34 @@ $gap-size: 1rem;
   }
 }
 
+.fancybox {
+  &-bg {
+    background: rgba($color-primary,.9)!important;
+  }
+  &-button {
+    color: $color-primary!important;
+    background: $color-bg!important;
+  }
+  &-navigation>button {
+    background: transparent!important;
+    &>div {
+      background: $color-bg!important;
+    }
+  }
+  &-infobar {
+    color: $color-bg!important;
+  }
+}
+
+.text-fancy {
+  font-family: $font-fancy;
+}
+.text-block {
+  display: inline-block;
+  border-radius: 99px;
+  padding: .25rem .75rem;
+  margin: .25rem .5rem .25rem 0;
+}
 .primary {
   color: $color-primary;
 }
@@ -199,6 +227,15 @@ $gap-size: 1rem;
     padding-left: $narrow-padding;
     padding-right: $narrow-padding;
     margin-bottom: $narrow-padding*2;
+  }
+}
+.no-padding {
+  margin-left: -0;
+  margin-right: -0;
+  >* {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -360,17 +397,40 @@ $gap-size: 1rem;
 .title {
   text-align: left;
   width: 100%;
-  border-bottom: 1px solid $color-divider;
+  color: $color-primary;
+  border-bottom: 1px solid $color-primary;
   margin-bottom: .25rem;
-  h5 {
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-  }
-  &-sub {
-    text-transform: uppercase;
-    font-weight: $bold;
-    padding-top: .25rem;
-    margin-bottom: 1.25rem;
+  &-fancy {
+    font-family: $font-fancy;
+    color: $color-primary;
+    height: 3.75rem;
+    h1 {
+      line-height: 3.75rem;
+    }
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 4rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:before {
+      left: 0;
+      background-image: url(../assets/title-left.png);
+      @include media-breakpoint-up(md) {
+        margin-left: 15px;
+      }
+    }
+    &:after {
+      right: 0;
+      background-image: url(../assets/title-right.png);
+      background-position-x: right;
+      @include media-breakpoint-up(md) {
+        margin-right: 15px;
+      }
+    }
   }
 }
 
@@ -387,7 +447,22 @@ button {
 }
 
 
+//TABLES
+.table {
+  thead td, tbody>tr:first-of-type td {
+    border-top: none;
+  }
+  thead td {
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  td {
+    padding: .25rem 0;
+  }
 
+
+}
 
 //LISTS
 .icons-only {
@@ -747,7 +822,6 @@ header {
     #navbar-fixed   {
       .navbar {
         &-nav {
-          margin-right: 4vw;
           padding: 0;
           background-color: transparent;
           li {
@@ -910,6 +984,13 @@ main {
 // GALLERY
 .gallery {
   @extend .gallery-padding;
+  .media-holder {
+    @include flipInY (
+      $duration: $trans-slow
+    );
+  }
+
+
   .col {
     margin-bottom: 3rem;
   }

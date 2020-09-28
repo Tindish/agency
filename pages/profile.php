@@ -1,102 +1,112 @@
-
-
-<?php //echo '_CURR_TARGET is '._CURR_TARGET.'</br>';?>
-
-<?php if (_CURR_TARGET !== ""): ?>
-
-  <?php //echo 'target is not empty</br>';?>
-
-  <?php 
-
-
-
-    $key = array_search('cristina-1', array_column($data['users'], 'url'));
-    var_dump($key);die();
-
-    if ($key !== false):
-
+<?php
+  $i = -1;  
+  if (_CURR_TARGET !== "") {
+    foreach ($data['users'] as $key => $user) {
+      if ($user['url'] === _CURR_TARGET) {
+        $i = $key;  
+        break;
+      } 
+    }
+    if ($i >= 0) {
+      $user = $data['users'][$i];
 ?>
-      
-
-    <div class="container py-5">
-      <h1><?php echo $data['users'][$key]['name'];?>'s Profile</h1>
-    </div>
-
-    <?php else: ?>
-      <?php 
-        echo 'index was false</br>';
-        include 'pages/page404.php';
-      ?>
-    <?php endif ?>
-
-  <?php else: ?>
-  <?php
-     include 'pages/page404.php';
-  ?>
-<?php endif; ?>
 
 
-
-
-
-
-<?php /*
-
+<!-- MAIN PAGE CONTENT IN HERE -->
 <div class="container container-medium text-left">
-
   <div class="row mt-2">
     <div class="col">
-      <a href="./gallery.php" class="plain">
-        <i class="far fa-arrow-left mr-2"></i>Back to search results
+      <a href="<?php echo _ROOT_FOLDER ?>#gallery.php" class="plain">
+        <i class="far fa-arrow-left mr-2"></i>Back to gallery
       </a>
     </div><!-- col -->
   </div><!-- row -->
 
 
-  <div class="row border-bottom mt-3">
-    <div class="col text-center">
-      <h3><?php echo $user['name'] ?></h3>
+  <div class="row mt-3">
+    <div class="col text-center title-fancy">
+      <h1 class="mb-0 py-0 text-capitalize"><?php echo $user['name'];?>'s Profile</h1>
     </div><!-- col -->
   </div><!-- row -->
 
   <?php
-    $gallery_location = './img/user/'.$user['id'].'/gallery/';
-    $no_images = '<p class="text-center mt-3">There are no images for this profile</p>';
+    $gallery_location ='assets/user/'.$user['id'].'/';
     if (file_exists($gallery_location)) {
       $images = array_values(array_diff(scandir($gallery_location), array('..', '.')));
       if ($images) {
-        echo '<div id="sliderProfile" class="gallery mt-4">';
-        foreach($images as $image) {
-          echo'
-            <a data-fancybox="gallery" href="'.$gallery_location.''.$image.'">
-              <div class="image-holder">
-                <img src="'.$gallery_location.''.$image.'" alt="">
+        $total = count($images);
+        echo '<div class="row gallery mt-4">';
+        $i = 0;
+        foreach ($images as $image) {
+          if ($i === 0) {
+            echo '
+            <div class="col-md-6">
+              <a data-fancybox="gallery" href="../'.$gallery_location.''.$image.'">
+                <div class="media-holder">
+                  <img src="../'.$gallery_location.''.$image.'" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-0">
+              <div class="row gallery mb-0">
+            ';
+          } elseif ($i < 5){
+            echo'
+                <div class="col-6">
+                  <a data-fancybox="gallery" href="../'.$gallery_location.''.$image.'">
+                    <div class="media-holder">
+                      <img src="../'.$gallery_location.''.$image.'" alt="">
+                    </div>
+                  </a>
+                </div>
+            ';
+          } elseif ($i === 5) {
+            echo'
               </div>
-            </a>
+            </div>
+          </div>
+          <div class="row gallery">
+            <div class="col-6 col-md-3">
+              <a data-fancybox="gallery" href="../'.$gallery_location.''.$image.'">
+                <div class="media-holder">
+                  <img src="../'.$gallery_location.''.$image.'" alt="">
+                </div>
+              </a>
+            </div>
+            ';
+          } else {
+            echo'
+            <div class="col-6 col-md-3">
+              <a data-fancybox="gallery" href="../'.$gallery_location.''.$image.'">
+                <div class="media-holder">
+                  <img src="../'.$gallery_location.''.$image.'" alt="">
+                </div>
+              </a>
+            </div>
           ';
+          }
+          $i++;
         }
-        echo'</div>';
+          echo '</div>';
+          if ($total < 6) {echo '</div></div>';}
       } else {
-        echo $no_images;
+        echo '<p class="text-center my-5">There are no images for this profile</p>';
       }
     } else {
-      echo $no_images;
+      echo '<p class="text-center my-5">There is no image folder for this profile</p>';
     }
   ?>
 
   <div class="px-md-4 pt-4">
 
-    <div class="row spaced-ends">
+    <div class="row">
 
       <div class="col-12 col-lg-6">
         <a href="tel:01234123456">
-          <div class="btn btn-wide reveal reveal-down">Call to Book<i class="fas fa-phone"></i></div>
+          <div class="btn btn-wide">Call to Book<i class="fas fa-phone"></i></div>
         </a>
         <a href="sms:01234123456">
-          <div class="btn btn-wide reveal reveal-down">Message to Book<i class="fas fa-sms"></i></div>
-        </a>
-        <a href="#" rel="nofollow">
-          <div class="btn btn-wide reveal reveal-down">Visit Website<i class="fas fa-globe"></i></div>
+          <div class="btn btn-wide">Message to Book<i class="fas fa-sms"></i></div>
         </a>
       </div>
 
@@ -111,7 +121,7 @@
         <div class="title">
           <h5>Stats</h5>
         </div>
-        <div class="px-md-4">
+        <div>
 
         <?php
           if ($user['stats']) {
@@ -123,7 +133,7 @@
                 </tr>
             ';
             $i=0;
-            foreach ($stats as $stat) {
+            foreach ($data['stats'] as $stat) {
               echo'
                 <tr>
                   <td>'.$stat['title'].'</td>
@@ -143,7 +153,7 @@
         <div class="title">
           <h5>Meeting Rates</h5>
         </div>
-        <div class="px-md-4">
+        <div>
         <?php if ($user['rates']) {
           echo '
           <table class="table">
@@ -185,26 +195,24 @@
           <h5>About me</h5>
         </div>
         <?php if ($user['bio']) {
-          echo '<p class="px-3 px-md-4">'.$user['bio'].'</p>';
+          echo '<p>'.$user['bio'].'</p>';
         } else {
-          echo '<p class="px-3 px-md-4">Information to follow</p>';
+          echo '<p>Information to follow</p>';
         } ?>
       </div>
       <div class="col-md-6 mb-4">
         <div class="title">
           <h5>Services</h5>
         </div>
-        <div class="px-3 px-md-4">
+        <div>
           <?php if ($user['services']) {
-            echo '<ul class="list list-4col">';
             $i=0;
-            foreach ($services as $service) {
+            foreach ($data['services'] as $service) {
               if ($user['services'][$i] == 1) {
-                echo'<li>'.$service.'</li>';
+                echo'<div class="text-block invert">'.$service.'</div>';
               }
               $i++;
             }
-            echo'</ul>';
           } else {
             echo '<p>Information to follow</p>';
           } ?>
@@ -219,5 +227,26 @@
 
 </div><!-- container -->
 
-*/ ?>
+
+
+
+<?php
+    } else {
+      echo '
+        <div class="container">
+          <h5 class="text-center pt-5">That person doesn&apos;t exist</h5>        
+        </div>
+      ';
+      include 'pages/page404.php';
+    }
+  } else {
+    echo '
+    <div class="container">
+      <h5 class="text-center pt-5">A name might help...</h5>        
+    </div>
+  ';
+  include 'pages/page404.php';
+  }
+
+?>
 

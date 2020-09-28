@@ -44,6 +44,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?php echo _ROOT_FOLDER ?>js/fancybox.min.js"></script>
 <script type="text/javascript" src="<?php echo _ROOT_FOLDER ?>js/init.min.js"></script>
+<link rel="stylesheet" href="<?php echo _ROOT_FOLDER ?>css/fancybox.min.css">
 
 
 </body>
