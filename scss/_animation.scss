@@ -13,6 +13,24 @@ $trans-slow: 1s; // Slow
 }
 
 
+// REVEAL SWIPE
+.reveal {
+  &:after {
+    content: '';
+    z-index: -1;
+    transition: all .3s linear; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+  }
+  &:hover, &.hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
 
 //BOUNCE up and down
 .bounce {
@@ -38,30 +56,26 @@ $trans-slow: 1s; // Slow
   );
 }
 
-// CIRCLE BEHIND IMAGE
-.circle {
-  @include zoomIn(
-    $duration: $trans-slow
-  );
-  img {
-    @include fadeIn(
-      $duration: $trans-slow
+//PROFILE
+.profile {
+  .title-fancy {
+    // overflow: hidden;
+    @include fadeInDown (
+      $duration: 1s
     );
+    &-small h5 {
+      @include fadeInRight (
+        $duration: 1s
+      );
+    }
   }
 }
 
-// NUMBER IN BLOCK
-.number {
-  @include flipInY(
-    $duration: $trans-slow
-  );
-}
-
-// GALLERY
+//GALLERY
 .gallery {
-  .image-holder {
-    @include fadeIn (
-      $duration: $trans-slow
+  .media-holder {
+    @include flipInY (
+      // $duration: $trans-slow
     );
   }
   .btn {

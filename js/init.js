@@ -1,3 +1,9 @@
+//MEDIA QUERIES
+const media_xs = window.matchMedia( "(max-width: 575.98px)" );
+const media_sm = window.matchMedia( "(max-width: 767.98px)" );
+const media_md = window.matchMedia( "(max-width: 991.98px)" );
+const media_lg = window.matchMedia( "(max-width: 1199.98px)" );
+
 
 $(document).ready(function () {
 
@@ -24,13 +30,59 @@ $(window).on("scroll touchmove", function () {
   $('#navbar-fixed').toggleClass('tiny', $(document).scrollTop() > 0);
 });
 
+
+// $('#nav-toggle').click(function () {
+//   console.log('clicked');
+//   if ($('.navbar-collapse .shows')) {
+//     console.log('opening');
+//     $('body').addClass('overflow');
+//   } else {
+//     console.log('closing');
+//     $('body').removeClass('overflow');
+//   }
+// });
+
 //FIX BODY CONTENT WHEN MOPILE NAV OPEN
-$('#navbarToggler').on('show.bs.collapse', function () {
-  $('body').toggleClass('overflow');
+// $('#navbarToggler').on('show.bs.collapse', function () {
+//   $('body').toggleClass('overflow');
+// });
+// $('#navbarToggler').on('hide.bs.collapse', function () {
+//   $('body').toggleClass('overflow');
+// });
+
+
+// ACTIVE ON SCROLL INTO VIEW AND KEEP
+// $(window).on('scroll', function() {
+//   $('.animateOnScroll').each(function() {
+//     if (isScrolledIntoView($(this))) {
+//       $(this).addClass('animated');
+//     }
+//   });
+// });
+
+
+// FAKING HOVER EFFECT ON MOBILE
+$(window).on('scroll', function() {
+  if (media_sm.matches) {
+    $('.inview').each(function() {
+      if (isScrolledIntoView($(this))) {
+        $(this).addClass('hover');
+      } else {
+        $(this).removeClass('hover');
+      }
+    });
+  }
 });
-$('#navbarToggler').on('hide.bs.collapse', function () {
-  $('body').toggleClass('overflow');
-});
+
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+  var padding = $(window).height() / 3;
+  var elemTop = $(elem).offset().top;
+  var elemBottom = (elemTop + $(elem).height());
+  return ((elemBottom <= (docViewBottom - padding)) && (elemTop >= (docViewTop + padding)));
+}
+
 
 //TOGGLE ICON
 $(function() {    

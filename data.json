@@ -3,9 +3,12 @@
     "name": "Adult Services Co",
     "url": "#"
   },
+  "general": {
+    "image_ext": "jpg"
+  },
   "client": {
     "name": "Lavender Escorts",
-    "main": "London Escorts",
+    "main": "All Escorts",
     "phone": "07700 900123",
     "sms": "07700 900123",
     "email": "hello@lavenderescorts.com",
@@ -13,7 +16,7 @@
     "socials": [{
       "name": "Facebook",
       "icon": "fab fa-facebook",
-      "url": "https://faceboook.com"
+      "url": "https://facebook.com"
     }, {
       "name": "Instagram",
       "icon": "fab fa-instagram",
@@ -24,15 +27,20 @@
       "url": "https://snapchat.com"
     }],
     "fonts": "family=Open+Sans:wght@400;700&family=Parisienne",
-    "primary": "764CCD"
+    "primary": "764CCD",
+    "currency": "£"
   },
   "addons": {
     "locations": 1,
+    "services": 1,
     "recruitment": 1,
     "blog": 1,
     "topbar": 1,
-    "footer-buttons": 1
+    "footer-buttons": 1,
+    "prevnext": 1,
+    "filters": 1
   },
+  "locations": ["Manchester", "London", "Birmingham", "Liverpool", "Glasgow", "Edinburgh", "Newcastle", "Derby"],
   "stats": {
     "nationalitys": {
       "id": "nationality",
@@ -43,11 +51,6 @@
       "id": "gender",
       "title": "Gender",
       "options": ["Female", "Male", "Trans", "Non-Binary", "Other"]
-    },
-    "locations": {
-      "id": "location",
-      "title": "Locations",
-      "options": ["Manchester", "London", "Birmingham", "Liverpool", "Glasgow", "Edinburgh", "Newcastle", "Derby"]
     },
     "sizes": {
       "id": "size",
@@ -75,20 +78,47 @@
       "options": ["Blue", "Brown", "Green", "Other"]
     }
   },
-  "services": ["Dinner Date", "OWO", "GFE", "DFK", "A-Level", "Domination", "CIM", "COF", "CIF", "PSE", "Massage", "Uniforms", "69", "Receiving Oral", "Duo", "Dinner Date", "OWO", "GFE", "DFK", "A-Level", "Domination", "CIM", "COF", "CIF", "PSE", "Massage", "Uniforms", "69", "Receiving Oral", "Duo"],
+  "services": ["Dinner Date", "OWO", "GFE", "DFK", "A-Level", "Domination", "CIM", "COF", "CIF", "PSE", "Massage", "Uniforms", "69", "Receiving Oral", "Duo"],
   "users": [{
     "id": 1,
     "name": "Christina",
     "url": "cristina-1",
     "status": 1,
     "age": "24",
-    "location": "London",
+    "locations": [1, 1, 1, 1, 1, 1, 1, 1],
     "price": 200,
     "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
     "tab0": "First Tab",
     "tab1": "Second Tab",
-    "stats": [1, 1, 5, 2, 3, 8, 2, 1],
-    "services": [1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 2,
+    "name": "Amelia",
+    "url": "amelia-1",
+    "status": 1,
+    "age": "24",
+    "locations": [0, 0, 1, 1, 1, 1, 1, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
     "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
     "rates": [{
       "name": "1 Hour",
@@ -108,17 +138,44 @@
       "rate2": 1800
     }]
   }, {
-    "id": 2,
-    "name": "Amelia",
-    "url": "amelia-1",
+    "id": 3,
+    "name": "Cindy",
+    "url": "cindy-1",
     "status": 1,
     "age": "24",
-    "location": "London",
+    "locations": [1, 0, 0, 1, 1, 0, 0, 1],
     "price": 200,
     "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
     "tab0": "First Tab",
     "tab1": "Second Tab",
-    "stats": [1, 1, 5, 2, 3, 8, 2, 1],
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 4,
+    "name": "Annabelle",
+    "url": "annabelle-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 1, 0, 0, 0, 1, 1, 1],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
     "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
     "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
     "rates": [{
@@ -138,5 +195,319 @@
       "rate1": 1800,
       "rate2": 1800
     }]
+  }, {
+    "id": 5,
+    "name": "Olivia",
+    "url": "olivia-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 6,
+    "name": "Charlotte",
+    "url": "charlotte-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Dinner Date",
+      "rate1": 700,
+      "rate2": 700
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 7,
+    "name": "Emily",
+    "url": "emily-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 8,
+    "name": "Scarlett",
+    "url": "scarlett-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Dinner Date",
+      "rate1": 700,
+      "rate2": 700
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 9,
+    "name": "Chloe",
+    "url": "chloe-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 10,
+    "name": "Elle",
+    "url": "elle-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Dinner Date",
+      "rate1": 700,
+      "rate2": 700
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 11,
+    "name": "Hannah",
+    "url": "hannah-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Dinner Date",
+      "rate1": 700,
+      "rate2": 700
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 12,
+    "name": "Addison",
+    "url": "addison-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 13,
+    "name": "Savannah",
+    "url": "savannah-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 14,
+    "name": "Samantha",
+    "url": "samantha-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
+  }, {
+    "id": 15,
+    "name": "Naomi",
+    "url": "naomi-1",
+    "status": 1,
+    "age": "24",
+    "locations": [1, 0, 0, 0, 0, 0, 0, 0],
+    "price": 200,
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illum perspiciatis facere id ex ut quia error voluptates doloremque totam.",
+    "tab0": "First Tab",
+    "tab1": "Second Tab",
+    "stats": [1, 1, 5, 3, 8, 2, 1],
+    "services": [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "categories": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rates": [{
+      "name": "1 Hour",
+      "rate1": 350,
+      "rate2": 400
+    }, {
+      "name": "Additional Hour",
+      "rate1": 300,
+      "rate2": 400
+    }, {
+      "name": "Overnight",
+      "rate1": 1800,
+      "rate2": 1800
+    }]
   }]
+  
 }
